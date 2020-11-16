@@ -71,7 +71,7 @@ func doConfigCommand(cmd *cobra.Command, args []string) {
 	}
 
 	buckets := conf.Buckets{cfg.GetBucket()}
-	if list, _ := cmd.Flags().GetBool("list"); list {
+	if list, _ := cmd.Flags().GetBool("all"); list {
 		buckets = cfg.Buckets
 	}
 
