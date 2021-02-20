@@ -64,8 +64,5 @@ func main() {
 		}
 	}
 
-	ctx := context.WithValue(context.Background(), "cfg", &cfg)
-	if err := root.ExecuteContext(ctx); err != nil {
-		log.Fatal(err)
-	}
+	_ = root.ExecuteContext(context.WithValue(context.Background(), "cfg", &cfg))
 }
